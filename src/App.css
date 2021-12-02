@@ -31,6 +31,15 @@ img {
     max-height: 40vh;
 }
 
+.deadBadge {
+    padding: 5px;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
 .mb-30 {
     margin-block: 30px;
 }

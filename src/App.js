@@ -14,12 +14,16 @@ function App() {
     // Fonction
     const handleLife = (pokemon, powerHit) => {
         if (pokemon === "Mew") {
-            if (mewLife >= 0) {
-                setMewLife(prevState => prevState - powerHit);
+            if (mewTwoLife >= 0 && !(mewTwoLife <= powerHit)) {
+                setMewTwoLife(prevState => prevState - powerHit);
+            } else {
+                setMewTwoLife(0);
             }
         } else {
-            if (mewTwoLife >= 0) {
-                setMewTwoLife(prevState => prevState - powerHit);
+            if (mewLife >= 0 && !(mewLife <= powerHit)) {
+                setMewLife(prevState => prevState - powerHit);
+            } else {
+                setMewLife(0);
             }
         }
     };

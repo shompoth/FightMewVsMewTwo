@@ -11,7 +11,11 @@ import countHits from "../../hoc/countHits";
 import MewPic from "../../assets/mew.png";
 
 function Mew(props) {
+    // Variables
     const { oppenentName, hocStateHits, handleHit, mewLife } = props;
+
+    const stillAlive =
+        mewLife > 0 ? `${mewLife} %` : <span className="deadBadge">Mort</span>;
 
     return (
         <div className={classes.container}>
@@ -26,11 +30,11 @@ function Mew(props) {
                 </tr>
                 <tr>
                     <td>{hocStateHits}</td>
-                    <td>{mewLife}</td>
+                    <td>{stillAlive}</td>
                 </tr>
             </table>
         </div>
     );
 }
 
-export default countHits(Mew, 20);
+export default countHits(Mew, 23);

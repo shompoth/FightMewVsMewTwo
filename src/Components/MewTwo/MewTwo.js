@@ -11,7 +11,11 @@ import countHits from "../../hoc/countHits";
 import MewTwoPic from "../../assets/mewtwo.png";
 
 const MewTwo = props => {
+    // Variables
     const { oppenentName, hocStateHits, handleHit, mewTwoLife } = props;
+
+    const stillAlive =
+        mewTwoLife > 0 ? `${mewTwoLife} %` : <span className="deadBadge">Mort</span>;
 
     return (
         <div className={classes.container}>
@@ -26,7 +30,7 @@ const MewTwo = props => {
                 </tr>
                 <tr>
                     <td>{hocStateHits}</td>
-                    <td>{mewTwoLife}</td>
+                    <td>{stillAlive}</td>
                 </tr>
             </table>
         </div>

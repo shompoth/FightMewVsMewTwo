@@ -8,11 +8,8 @@ const countHits = (WrappedComponent, powerHit) => {
         // Fonction
         const handleHit = () => {
             setHits(prevState => prevState + 1);
-            if (WrappedComponent.name === "Mew") {
-                props.handleLife("MewTwo", powerHit);
-            } else {
-                props.handleLife("Mew", powerHit);
-            }
+
+            props.handleLife(WrappedComponent.name, powerHit);
         };
 
         return <WrappedComponent hocStateHits={hits} handleHit={handleHit} {...props} />;
