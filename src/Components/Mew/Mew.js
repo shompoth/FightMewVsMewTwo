@@ -19,15 +19,23 @@ function Mew(props) {
 
     const opacityImgStyle = mewLife > 0 ? null : { opacity: 0.3 };
 
+    // Fonction
+    const displayMessage = () => {
+        return mewLife > 0 ? (
+            <h2 className="win">Mew a gagné ce combat</h2>
+        ) : (
+            <h2 className="defeated">Loose...</h2>
+        );
+    };
+
     return (
         <div className={classes.container}>
+            {isButtonAvaible ? displayMessage() : null}
             <img src={MewPic} style={opacityImgStyle} alt="Mew" />
             <button onClick={handleHit} disabled={isButtonAvaible}>
                 Frapper {oppenentName}
             </button>
-            {isButtonAvaible && mewLife ? <h2>Mew a gagné ce combat</h2> : null}
             <hr class="rounded" />
-
             <table>
                 <tr>
                     <th>Coups</th>

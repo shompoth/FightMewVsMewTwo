@@ -28,7 +28,7 @@ h2 {
 }
 
 img {
-    max-height: 40vh;
+    max-height: 35vh;
 }
 
 .deadBadge {
@@ -40,8 +40,13 @@ img {
     font-weight: bold;
 }
 
-.mb-30 {
-    margin-block: 30px;
+.defeated {
+    color: red;
+}
+
+.win {
+    color: green;
+    font-weight: bold;
 }
 
 button {
