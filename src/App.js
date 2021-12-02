@@ -10,6 +10,7 @@ function App() {
     // State
     const [mewLife, setMewLife] = useState(100);
     const [mewTwoLife, setMewTwoLife] = useState(100);
+    const [isButtonAvaible, setIsButtonAvaible] = useState(false);
 
     // Fonction
     const handleLife = (pokemon, powerHit) => {
@@ -18,12 +19,14 @@ function App() {
                 setMewTwoLife(prevState => prevState - powerHit);
             } else {
                 setMewTwoLife(0);
+                setIsButtonAvaible(true);
             }
         } else {
             if (mewLife >= 0 && !(mewLife <= powerHit)) {
                 setMewLife(prevState => prevState - powerHit);
             } else {
                 setMewLife(0);
+                setIsButtonAvaible(true);
             }
         }
     };
@@ -39,11 +42,13 @@ function App() {
                         oppenentName="Mewtwo"
                         mewLife={mewLife}
                         handleLife={handleLife}
+                        isButtonAvaible={isButtonAvaible}
                     />
                     <MewTwo
                         oppenentName="Mew"
                         mewTwoLife={mewTwoLife}
                         handleLife={handleLife}
+                        isButtonAvaible={isButtonAvaible}
                     />
                 </div>
             </div>
