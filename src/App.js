@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+
+// Composants
+import Mew from "./Components/Mew/Mew";
+import MewTwo from "./Components/MewTwo/MewTwo";
+import Separator from "./Components/Separator/Separator";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="containerApp">
+                <h1>Mew vs MewTwo</h1>
+                <h2>Qui est le plus fort ?</h2>
+                <Separator />
+                <div className="divPokemon">
+                    <Mew oppenentName="Mewtwo" />
+                    <MewTwo oppenentName="Mew" />
+                </div>
+            </div>
+        </div>
+    );
 }
 
 export default App;
