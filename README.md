@@ -1,6 +1,6 @@
 # React.js
 
-Ce projet est un simulateur de combat entre Mew et Mewtwo.
+Ce projet est un simulateur de combat entre Mew et Mewtwo qui à pour but de mettre en pratique le Higther-Order Component (un pattern en React.js)
 
 ## Crée avec
 
