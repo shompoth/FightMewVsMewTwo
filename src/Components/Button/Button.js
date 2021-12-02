@@ -1,12 +1,12 @@
 import React from "react";
 import classes from "./Button.module.css";
 
-const Button = ({ handleHit, isButtonAvaible, children, className = null }) => {
+const Button = ({ handleHit, isButtonNotAvaible, children, className = null }) => {
     return (
         <button
             className={`${className} ${classes.button}`}
             onClick={handleHit}
-            disabled={isButtonAvaible}
+            disabled={isButtonNotAvaible}
         >
             {children}
         </button>

@@ -17,7 +17,7 @@ const MewTwo = props => {
         hocStateHits,
         handleHit,
         mewTwoLife,
-        isButtonAvaible,
+        isButtonNotAvaible,
         buttonInGameAvaibleMewTwo,
     } = props;
 
@@ -37,7 +37,7 @@ const MewTwo = props => {
 
     const generalButtonAvaible = () => {
         // Check if endGame disable all buttons
-        if (isButtonAvaible) {
+        if (isButtonNotAvaible) {
             return true;
         } else {
             // switch hit
@@ -47,29 +47,32 @@ const MewTwo = props => {
 
     return (
         <div className={classes.container}>
-            {isButtonAvaible && displayMessage()}
+            {isButtonNotAvaible && displayMessage()}
 
             <img src={MewTwoPic} style={opacityImgStyle} alt="Mew" />
 
             <Button
                 handleHit={handleHit}
                 className={classes.mewTwoButton}
-                isButtonAvaible={generalButtonAvaible()}
+                isButtonNotAvaible={generalButtonAvaible()}
             >
                 Frapper {oppenentName}
             </Button>
 
-            <hr class="rounded" />
+            <hr className="rounded" />
 
             <table>
-                <tr>
-                    <th>Coups</th>
-                    <th>Vie</th>
-                </tr>
-                <tr>
-                    <td>{hocStateHits}</td>
-                    <td>{stillAlive}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <th>Coups</th>
+                        <th>Vie</th>
+                    </tr>
+
+                    <tr>
+                        <td>{hocStateHits}</td>
+                        <td>{stillAlive}</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     );

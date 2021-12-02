@@ -10,7 +10,7 @@ function App() {
     // State
     const [mewLife, setMewLife] = useState(100);
     const [mewTwoLife, setMewTwoLife] = useState(100);
-    const [isButtonAvaible, setIsButtonAvaible] = useState(false);
+    const [isButtonNotAvaible, setIsButtonNotAvaible] = useState(false);
 
     const [buttonInGameAvaibleMew, setButtonInGameAvaibleMew] = useState(0);
     const [buttonInGameAvaibleMewTwo, setButtonInGameAvaibleMewTwo] = useState(0);
@@ -18,7 +18,7 @@ function App() {
     //useEffect
     useEffect(() => {
         const numberZeroOrOne = Math.round(Math.random());
-        console.log(numberZeroOrOne);
+
         if (numberZeroOrOne === 0) {
             setButtonInGameAvaibleMewTwo(true);
             setButtonInGameAvaibleMew(false);
@@ -40,7 +40,7 @@ function App() {
                 setButtonInGameAvaibleMewTwo(false);
             } else {
                 setMewTwoLife(0);
-                setIsButtonAvaible(true);
+                setIsButtonNotAvaible(true);
             }
         } else {
             if (mewLife >= 0 && !(mewLife <= powerHit)) {
@@ -52,16 +52,13 @@ function App() {
                 setButtonInGameAvaibleMew(false);
             } else {
                 setMewLife(0);
-                setIsButtonAvaible(true);
+                setIsButtonNotAvaible(true);
             }
         }
     };
 
     return (
         <div className="App">
-            {console.log(
-                `Mew: ${buttonInGameAvaibleMew}, MewTwo: ${buttonInGameAvaibleMewTwo}`,
-            )}
             <div className="containerApp">
                 <h1>Mew vs MewTwo</h1>
                 <h2>Qui est le plus fort ?</h2>
@@ -71,14 +68,14 @@ function App() {
                         oppenentName="Mewtwo"
                         mewLife={mewLife}
                         handleHitAction={handleHitAction}
-                        isButtonAvaible={isButtonAvaible}
+                        isButtonNotAvaible={isButtonNotAvaible}
                         buttonInGameAvaibleMew={buttonInGameAvaibleMew}
                     />
                     <MewTwo
                         oppenentName="Mew"
                         mewTwoLife={mewTwoLife}
                         handleHitAction={handleHitAction}
-                        isButtonAvaible={isButtonAvaible}
+                        isButtonNotAvaible={isButtonNotAvaible}
                         buttonInGameAvaibleMewTwo={buttonInGameAvaibleMewTwo}
                     />
                 </div>
