@@ -1,8 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Mew.module.css";
-
-// Composant
-import Separator from "../Separator/Separator";
 
 // HOC
 import countHits from "../../hoc/countHits";
@@ -11,6 +8,14 @@ import countHits from "../../hoc/countHits";
 import MewPic from "../../assets/mew.png";
 
 function Mew(props) {
+    // // State
+    // const [powerHit, setPowerHit] = useState(0);
+
+    // //useEffect
+    // useEffect(() => {
+    //     setPowerHit(Math.floor(Math.random() * 40) + 1);
+    // });
+
     // Variables
     const { oppenentName, hocStateHits, handleHit, mewLife, isButtonAvaible } = props;
 
@@ -50,4 +55,5 @@ function Mew(props) {
     );
 }
 
-export default countHits(Mew, 23);
+// export default countHits(Mew, powerHit);
+export default countHits(Mew);

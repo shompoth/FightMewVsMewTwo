@@ -1,8 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./MewTwo.module.css";
-
-// Composant
-import Separator from "../Separator/Separator";
 
 // HOC
 import countHits from "../../hoc/countHits";
@@ -52,4 +49,4 @@ const MewTwo = props => {
     );
 };
 
-export default countHits(MewTwo, 15);
+export default countHits(MewTwo);
