@@ -8,7 +8,7 @@ const countHits = WrappedComponent => {
 
         //useEffect
         useEffect(() => {
-            setPowerHit(Math.floor(Math.random() * 40) + 1);
+            setPowerHit(Math.floor(Math.random() * 40) + 5);
         }, []);
 
         // Fonction

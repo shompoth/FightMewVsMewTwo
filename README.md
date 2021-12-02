@@ -1,6 +1,11 @@
 # React.js
 
-Ce projet est un simulateur de combat entre Mew et Mewtwo qui à pour but de mettre en pratique le Higther-Order Component (un pattern en React.js)
+Ce projet est un simulateur de combat entre Mew et Mewtwo qui à pour but de mettre en pratique le Higther-Order Component (un pattern en React.js).
+Le premier Pokemon à envoyer son coup est choisi de manière aléatoire.
+Dès que ce dernier l'a envoyer, c'est à l'autre de riposter.
+La puissance des coups est aléatoire et propre au Pokemon. Une fois définie en début de partie, elle reste la même jusqu'a la fin.
+
+Bon jeu !
 
 ## Crée avec
 

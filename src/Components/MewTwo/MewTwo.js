@@ -29,7 +29,7 @@ const MewTwo = props => {
     // Fonction
     const displayMessage = () => {
         return mewTwoLife > 0 ? (
-            <h2 className="win">Mew a gagné ce combat</h2>
+            <h2 className="win">Mewtwo a gagné !</h2>
         ) : (
             <h2 className="defeated">Loose...</h2>
         );
@@ -51,7 +51,11 @@ const MewTwo = props => {
 
             <img src={MewTwoPic} style={opacityImgStyle} alt="Mew" />
 
-            <Button handleHit={handleHit} isButtonAvaible={generalButtonAvaible()}>
+            <Button
+                handleHit={handleHit}
+                className={classes.mewTwoButton}
+                isButtonAvaible={generalButtonAvaible()}
+            >
                 Frapper {oppenentName}
             </Button>
 

@@ -29,7 +29,7 @@ function Mew(props) {
     // Fonction
     const displayMessage = () => {
         return mewLife > 0 ? (
-            <h2 className="win">Mew a gagné ce combat</h2>
+            <h2 className="win">Mew a gagné !</h2>
         ) : (
             <h2 className="defeated">Loose...</h2>
         );
@@ -50,7 +50,11 @@ function Mew(props) {
             {isButtonAvaible ? displayMessage() : null}
             <img src={MewPic} style={opacityImgStyle} alt="Mew" />
 
-            <Button handleHit={handleHit} isButtonAvaible={generalButtonAvaible()}>
+            <Button
+                handleHit={handleHit}
+                className={classes.mewButton}
+                isButtonAvaible={generalButtonAvaible()}
+            >
                 Frapper {oppenentName}
             </Button>
 
@@ -69,5 +73,4 @@ function Mew(props) {
     );
 }
 
-// export default countHits(Mew, powerHit);
 export default countHits(Mew);
