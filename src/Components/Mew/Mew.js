@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import classes from "./Mew.module.css";
 
+// Composant
+import Button from "../Button/Button";
+
 // HOC
 import countHits from "../../hoc/countHits";
 
@@ -8,14 +11,6 @@ import countHits from "../../hoc/countHits";
 import MewPic from "../../assets/mew.png";
 
 function Mew(props) {
-    // // State
-    // const [powerHit, setPowerHit] = useState(0);
-
-    // //useEffect
-    // useEffect(() => {
-    //     setPowerHit(Math.floor(Math.random() * 40) + 1);
-    // });
-
     // Variables
     const { oppenentName, hocStateHits, handleHit, mewLife, isButtonAvaible } = props;
 
@@ -37,9 +32,11 @@ function Mew(props) {
         <div className={classes.container}>
             {isButtonAvaible ? displayMessage() : null}
             <img src={MewPic} style={opacityImgStyle} alt="Mew" />
-            <button onClick={handleHit} disabled={isButtonAvaible}>
+
+            <Button handleHit={handleHit} isButtonAvaible={isButtonAvaible}>
                 Frapper {oppenentName}
-            </button>
+            </Button>
+
             <hr class="rounded" />
             <table>
                 <tr>

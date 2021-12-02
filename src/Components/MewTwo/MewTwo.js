@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import classes from "./MewTwo.module.css";
 
+// Composant
+import Button from "../Button/Button";
+
 // HOC
 import countHits from "../../hoc/countHits";
 
@@ -30,9 +33,11 @@ const MewTwo = props => {
             {isButtonAvaible && displayMessage()}
 
             <img src={MewTwoPic} style={opacityImgStyle} alt="Mew" />
-            <button onClick={handleHit} disabled={isButtonAvaible}>
+
+            <Button handleHit={handleHit} isButtonAvaible={isButtonAvaible}>
                 Frapper {oppenentName}
-            </button>
+            </Button>
+
             <hr class="rounded" />
 
             <table>
