@@ -1,0 +1,13 @@
+.button {
+    padding: 13px 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-block: 45px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:active {
+    transform: scale(0.95);
+}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./Mew.module.css";
 
 // Composant
@@ -12,7 +12,14 @@ import MewPic from "../../assets/mew.png";
 
 function Mew(props) {
     // Variables
-    const { oppenentName, hocStateHits, handleHit, mewLife, isButtonAvaible } = props;
+    const {
+        oppenentName,
+        hocStateHits,
+        handleHit,
+        mewLife,
+        isButtonAvaible,
+        buttonInGameAvaibleMew,
+    } = props;
 
     const stillAlive =
         mewLife > 0 ? `${mewLife} %` : <span className="deadBadge">Mort</span>;
@@ -28,12 +35,22 @@ function Mew(props) {
         );
     };
 
+    const generalButtonAvaible = () => {
+        // Check if endGame disable all buttons
+        if (isButtonAvaible) {
+            return true;
+        } else {
+            // switch hit
+            return buttonInGameAvaibleMew ? true : false;
+        }
+    };
+
     return (
         <div className={classes.container}>
             {isButtonAvaible ? displayMessage() : null}
             <img src={MewPic} style={opacityImgStyle} alt="Mew" />
 
-            <Button handleHit={handleHit} isButtonAvaible={isButtonAvaible}>
+            <Button handleHit={handleHit} isButtonAvaible={generalButtonAvaible()}>
                 Frapper {oppenentName}
             </Button>
 
