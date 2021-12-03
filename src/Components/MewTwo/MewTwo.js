@@ -18,7 +18,7 @@ const MewTwo = props => {
         handleHit,
         mewTwoLife,
         isButtonNotAvaible,
-        buttonInGameAvaibleMewTwo,
+        buttonInGameNotAvaibleMewTwo,
     } = props;
 
     const stillAlive =
@@ -41,7 +41,7 @@ const MewTwo = props => {
             return true;
         } else {
             // switch hit
-            return buttonInGameAvaibleMewTwo ? true : false;
+            return buttonInGameNotAvaibleMewTwo ? true : false;
         }
     };
 

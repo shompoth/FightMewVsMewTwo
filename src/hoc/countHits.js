@@ -14,7 +14,7 @@ const countHits = WrappedComponent => {
         // Fonction
         const handleHit = () => {
             setHits(prevState => prevState + 1);
-            console.log(WrappedComponent.name);
+
             props.handleHitAction(WrappedComponent.name, powerHit);
         };
 

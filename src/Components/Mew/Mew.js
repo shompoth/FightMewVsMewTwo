@@ -18,7 +18,7 @@ function Mew(props) {
         handleHit,
         mewLife,
         isButtonNotAvaible,
-        buttonInGameAvaibleMew,
+        buttonInGameNotAvaibleMew,
     } = props;
 
     const stillAlive =
@@ -41,7 +41,7 @@ function Mew(props) {
             return true;
         } else {
             // switch hit
-            return buttonInGameAvaibleMew ? true : false;
+            return buttonInGameNotAvaibleMew ? true : false;
         }
     };
 

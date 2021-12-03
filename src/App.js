@@ -12,46 +12,70 @@ function App() {
     const [mewTwoLife, setMewTwoLife] = useState(100);
     const [isButtonNotAvaible, setIsButtonNotAvaible] = useState(false);
 
-    const [buttonInGameAvaibleMew, setButtonInGameAvaibleMew] = useState(0);
-    const [buttonInGameAvaibleMewTwo, setButtonInGameAvaibleMewTwo] = useState(0);
+    const [buttonInGameNotAvaibleMew, setButtonInGameNotAvaibleMew] = useState(0);
+    const [buttonInGameNotAvaibleMewTwo, setButtonInGameNotAvaibleMewTwo] = useState(0);
 
     //useEffect
     useEffect(() => {
         const numberZeroOrOne = Math.round(Math.random());
 
         if (numberZeroOrOne === 0) {
-            setButtonInGameAvaibleMewTwo(true);
-            setButtonInGameAvaibleMew(false);
+            setButtonInGameNotAvaibleMewTwo(true);
+            setButtonInGameNotAvaibleMew(false);
         } else {
-            setButtonInGameAvaibleMew(true);
-            setButtonInGameAvaibleMewTwo(false);
+            setButtonInGameNotAvaibleMew(true);
+            setButtonInGameNotAvaibleMewTwo(false);
         }
     }, []);
 
     // Fonction
     const handleHitAction = (pokemon, powerHit) => {
-        if (pokemon === "Mew") {
-            if (mewTwoLife >= 0 && !(mewTwoLife <= powerHit)) {
-                // Decrease Life of Mewtwo
-                setMewTwoLife(prevState => prevState - powerHit);
+        if (pokemon === "MewTwo") {
+            // if (mewTwoLife >= 0 && !(mewTwoLife <= powerHit)) {
+            //     // Decrease Life of Mewtwo
+            //     setMewTwoLife(prevState => prevState - powerHit);
 
-                // Switch Hit to MewTwo
-                setButtonInGameAvaibleMew(true);
-                setButtonInGameAvaibleMewTwo(false);
-            } else {
-                setMewTwoLife(0);
-                setIsButtonNotAvaible(true);
-            }
-        } else {
+            //     // Switch Hit to MewTwo
+            //     setButtonInGameNotAvaibleMew(true);
+            //     setButtonInGameNotAvaibleMewTwo(false);
+            // } else {
+            //     setMewTwoLife(0);
+            //     setIsButtonNotAvaible(true);
+            // }
+
             if (mewLife >= 0 && !(mewLife <= powerHit)) {
                 // Decrease Life of Mew
                 setMewLife(prevState => prevState - powerHit);
 
                 // Switch Hit to Mew
-                setButtonInGameAvaibleMewTwo(true);
-                setButtonInGameAvaibleMew(false);
+                setButtonInGameNotAvaibleMewTwo(true);
+                setButtonInGameNotAvaibleMew(false);
             } else {
                 setMewLife(0);
+                setIsButtonNotAvaible(true);
+            }
+        } else {
+            // if (mewLife >= 0 && !(mewLife <= powerHit)) {
+            //     // Decrease Life of Mew
+            //     setMewLife(prevState => prevState - powerHit);
+
+            //     // Switch Hit to Mew
+            //     setButtonInGameNotAvaibleMewTwo(true);
+            //     setButtonInGameNotAvaibleMew(false);
+            // } else {
+            //     setMewLife(0);
+            //     setIsButtonNotAvaible(true);
+            // }
+
+            if (mewTwoLife >= 0 && !(mewTwoLife <= powerHit)) {
+                // Decrease Life of Mewtwo
+                setMewTwoLife(prevState => prevState - powerHit);
+
+                // Switch Hit to MewTwo
+                setButtonInGameNotAvaibleMew(true);
+                setButtonInGameNotAvaibleMewTwo(false);
+            } else {
+                setMewTwoLife(0);
                 setIsButtonNotAvaible(true);
             }
         }
@@ -69,14 +93,14 @@ function App() {
                         mewLife={mewLife}
                         handleHitAction={handleHitAction}
                         isButtonNotAvaible={isButtonNotAvaible}
-                        buttonInGameAvaibleMew={buttonInGameAvaibleMew}
+                        buttonInGameNotAvaibleMew={buttonInGameNotAvaibleMew}
                     />
                     <MewTwo
                         oppenentName="Mew"
                         mewTwoLife={mewTwoLife}
                         handleHitAction={handleHitAction}
                         isButtonNotAvaible={isButtonNotAvaible}
-                        buttonInGameAvaibleMewTwo={buttonInGameAvaibleMewTwo}
+                        buttonInGameNotAvaibleMewTwo={buttonInGameNotAvaibleMewTwo}
                     />
                 </div>
             </div>
