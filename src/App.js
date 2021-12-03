@@ -30,24 +30,7 @@ function App() {
 
     // Fonction
     const handleHitAction = (pokemon, powerHit) => {
-        console.log(`le pokemon est ${pokemon}`);
-        console.log(`type de la variable pokemon :`);
-        console.log(typeof pokemon);
-        console.log(`type de power Hit :`);
-        console.log(typeof powerHit);
         if (pokemon === "MewTwo") {
-            // if (mewTwoLife >= 0 && !(mewTwoLife <= powerHit)) {
-            //     // Decrease Life of Mewtwo
-            //     setMewTwoLife(prevState => prevState - powerHit);
-
-            //     // Switch Hit to MewTwo
-            //     setButtonInGameNotAvaibleMew(true);
-            //     setButtonInGameNotAvaibleMewTwo(false);
-            // } else {
-            //     setMewTwoLife(0);
-            //     setIsButtonNotAvaible(true);
-            // }
-
             if (mewLife >= 0 && !(mewLife <= powerHit)) {
                 // Decrease Life of Mew
                 setMewLife(prevState => prevState - powerHit);
@@ -60,18 +43,6 @@ function App() {
                 setIsButtonNotAvaible(true);
             }
         } else {
-            // if (mewLife >= 0 && !(mewLife <= powerHit)) {
-            //     // Decrease Life of Mew
-            //     setMewLife(prevState => prevState - powerHit);
-
-            //     // Switch Hit to Mew
-            //     setButtonInGameNotAvaibleMewTwo(true);
-            //     setButtonInGameNotAvaibleMew(false);
-            // } else {
-            //     setMewLife(0);
-            //     setIsButtonNotAvaible(true);
-            // }
-
             if (mewTwoLife >= 0 && !(mewTwoLife <= powerHit)) {
                 // Decrease Life of Mewtwo
                 setMewTwoLife(prevState => prevState - powerHit);

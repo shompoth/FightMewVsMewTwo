@@ -14,9 +14,7 @@ const countHits = WrappedComponent => {
         // Fonction
         const handleHit = pokemonName => {
             setHits(prevState => prevState + 1);
-            console.log(
-                `nom du pokemon dans fonction countHits : ${WrappedComponent.name}`,
-            );
+
             props.handleHitAction(pokemonName, powerHit);
         };
 
