@@ -30,6 +30,11 @@ function App() {
 
     // Fonction
     const handleHitAction = (pokemon, powerHit) => {
+        console.log(`le pokemon est ${pokemon}`);
+        console.log(`type de la variable pokemon :`);
+        console.log(typeof pokemon);
+        console.log(`type de power Hit :`);
+        console.log(typeof powerHit);
         if (pokemon === "MewTwo") {
             // if (mewTwoLife >= 0 && !(mewTwoLife <= powerHit)) {
             //     // Decrease Life of Mewtwo
