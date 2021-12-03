@@ -1,8 +1,9 @@
 import React from "react";
 import classes from "./MewTwo.module.css";
 
-// Composant
+// Composants
 import Button from "../Button/Button";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 // HOC
 import countHits from "../../hoc/countHits";
@@ -29,7 +30,7 @@ const MewTwo = props => {
     // Fonction
     const displayMessage = () => {
         return mewTwoLife > 0 ? (
-            <h2 className="win">Mewtwo a gagné !</h2>
+            <h2 className="win">Mewtwo win !</h2>
         ) : (
             <h2 className="defeated">Loose...</h2>
         );
@@ -48,32 +49,18 @@ const MewTwo = props => {
     return (
         <div className={classes.container}>
             {isButtonNotAvaible && displayMessage()}
-
-            <img src={MewTwoPic} style={opacityImgStyle} alt="Mew" />
+            <img src={MewTwoPic} style={opacityImgStyle} alt="Mewtwo" />
 
             <Button
                 handleHit={() => handleHit("MewTwo")}
                 className={classes.mewTwoButton}
                 isButtonNotAvaible={generalButtonAvaible()}
+                hocStateHits={hocStateHits}
             >
-                Frapper {oppenentName}
+                Attaquer {oppenentName}
             </Button>
 
-            <hr className="rounded" />
-
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Coups</th>
-                        <th>Vie</th>
-                    </tr>
-
-                    <tr>
-                        <td>{hocStateHits}</td>
-                        <td>{stillAlive}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <ProgressBar bgColor={"#dad4e0"} life={mewTwoLife} stillAlive={stillAlive} />
         </div>
     );
 };

@@ -1,8 +1,9 @@
 import React from "react";
 import classes from "./Mew.module.css";
 
-// Composant
+// Composants
 import Button from "../Button/Button";
+import ProgressBar from "../ProgressBar/ProgressBar";
 
 // HOC
 import countHits from "../../hoc/countHits";
@@ -29,7 +30,7 @@ function Mew(props) {
     // Fonction
     const displayMessage = () => {
         return mewLife > 0 ? (
-            <h2 className="win">Mew a gagné !</h2>
+            <h2 className="win">Mew win !</h2>
         ) : (
             <h2 className="defeated">Loose...</h2>
         );
@@ -54,23 +55,12 @@ function Mew(props) {
                 handleHit={() => handleHit("Mew")}
                 className={classes.mewButton}
                 isButtonNotAvaible={generalButtonAvaible()}
+                hocStateHits={hocStateHits}
             >
-                Frapper {oppenentName}
+                Attaquer {oppenentName}
             </Button>
 
-            <hr className="rounded" />
-            <table>
-                <tbody>
-                    <tr>
-                        <th>Coups</th>
-                        <th>Vie</th>
-                    </tr>
-                    <tr>
-                        <td>{hocStateHits}</td>
-                        <td>{stillAlive}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <ProgressBar bgColor={"#fbd1d1"} life={mewLife} />
         </div>
     );
 }

@@ -60,22 +60,6 @@ hr.rounded {
     opacity: 0.4;
 }
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 500px;
-    min-width: 150px;
-    text-align: center;
-    table-layout: fixed;
-}
-
-th,
-td {
-    height: 40px;
-    max-width: 40px;
-    padding: 4px;
-}
-
 @media screen and (max-width: 800px) {
     hr.rounded {
         width: 80%;
