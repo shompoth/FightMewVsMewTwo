@@ -22,7 +22,7 @@ function Mew(props) {
     } = props;
 
     const stillAlive =
-        mewLife > 0 ? `${mewLife} %` : <span className="deadBadge">Mort</span>;
+        mewLife > 0 ? `${mewLife} %` : <span className="deadBadge">KO</span>;
 
     const opacityImgStyle = mewLife > 0 ? null : { opacity: 0.3 };
 
