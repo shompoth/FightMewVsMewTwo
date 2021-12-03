@@ -63,7 +63,7 @@ function App() {
                 <h1>
                     {/* <span style={{ textShadow: "#fbd1d1 1px 0px 10px " }}>Mew</span> vs{" "}
                     <span style={{ textShadow: "#dad4e0 1px 0px 10px " }}>MewTwo</span> */}
-                    Mew vs Mewtwo
+                    Mew ⚡ Mewtwo
                 </h1>
                 <h2>Who's the best ?</h2>
                 <Separator />
