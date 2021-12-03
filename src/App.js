@@ -65,7 +65,7 @@ function App() {
                     <span style={{ textShadow: "#dad4e0 1px 0px 10px " }}>MewTwo</span> */}
                     Mew vs Mewtwo
                 </h1>
-                <h2>Qui est le plus fort ?</h2>
+                <h2>Who's the best ?</h2>
                 <Separator />
                 <div className="divPokemon">
                     <Mew

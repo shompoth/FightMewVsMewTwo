@@ -35,12 +35,6 @@ const ProgressBar = ({ bgColor, life }) => {
         fontWeight: "bold",
     };
 
-    const labelStylesKo = {
-        padding: 5,
-        fontSize: 16,
-        fontWeight: "bold",
-    };
-
     const alive =
         life > 0 ? (
             <span style={labelStyles}>{`${life}%`}</span>
@@ -50,10 +44,7 @@ const ProgressBar = ({ bgColor, life }) => {
 
     return (
         <div style={containerBarStyles}>
-            <div style={fillerStyles}>
-                {/* <span style={labelStyles}>{`${life}%`}</span> */}
-                {alive}
-            </div>
+            <div style={fillerStyles}>{alive}</div>
         </div>
     );
 };

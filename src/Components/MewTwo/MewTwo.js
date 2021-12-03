@@ -22,9 +22,6 @@ const MewTwo = props => {
         buttonInGameNotAvaibleMewTwo,
     } = props;
 
-    const stillAlive =
-        mewTwoLife > 0 ? `${mewTwoLife} %` : <span className="deadBadge">KO</span>;
-
     const opacityImgStyle = mewTwoLife > 0 ? null : { opacity: 0.3 };
 
     // Fonction
@@ -57,7 +54,7 @@ const MewTwo = props => {
                 isButtonNotAvaible={generalButtonAvaible()}
                 hocStateHits={hocStateHits}
             >
-                Attaquer {oppenentName}
+                Attack {oppenentName}
             </Button>
 
             <ProgressBar bgColor={"#dad4e0"} life={mewTwoLife} />
