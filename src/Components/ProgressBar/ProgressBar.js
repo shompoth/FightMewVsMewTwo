@@ -1,6 +1,15 @@
 import React from "react";
 
 const ProgressBar = ({ bgColor, life }) => {
+    let colorLife = 0;
+    if (life <= 29) {
+        colorLife = "red";
+    } else if (life <= 69) {
+        colorLife = "orange";
+    } else {
+        colorLife = "green";
+    }
+
     // Styles
     const containerBarStyles = {
         height: 20,
@@ -14,7 +23,7 @@ const ProgressBar = ({ bgColor, life }) => {
     const fillerStyles = {
         height: "100%",
         width: `${life}%`,
-        backgroundColor: bgColor,
+        backgroundColor: colorLife,
         borderRadius: 5,
         transition: "width 1s ease-in-out",
         textAlign: "right",

@@ -60,7 +60,11 @@ function App() {
     return (
         <div className="App">
             <div className="containerApp">
-                <h1>Mew vs MewTwo</h1>
+                <h1>
+                    {/* <span style={{ textShadow: "#fbd1d1 1px 0px 10px " }}>Mew</span> vs{" "}
+                    <span style={{ textShadow: "#dad4e0 1px 0px 10px " }}>MewTwo</span> */}
+                    Mew vs Mewtwo
+                </h1>
                 <h2>Qui est le plus fort ?</h2>
                 <Separator />
                 <div className="divPokemon">

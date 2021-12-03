@@ -60,7 +60,7 @@ const MewTwo = props => {
                 Attaquer {oppenentName}
             </Button>
 
-            <ProgressBar bgColor={"#dad4e0"} life={mewTwoLife} stillAlive={stillAlive} />
+            <ProgressBar bgColor={"#dad4e0"} life={mewTwoLife} />
         </div>
     );
 };
