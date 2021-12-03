@@ -51,7 +51,7 @@ function Mew(props) {
             <img src={MewPic} style={opacityImgStyle} alt="Mew" />
 
             <Button
-                handleHit={handleHit}
+                handleHit={() => handleHit("Mew")}
                 className={classes.mewButton}
                 isButtonNotAvaible={generalButtonAvaible()}
             >

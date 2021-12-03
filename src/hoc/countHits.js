@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const countHits = WrappedComponent => {
-    console.log(`le component dans fonction countHits ${WrappedComponent}`);
     const CountHits = props => {
         // State
         const [hits, setHits] = useState(0);
@@ -13,12 +12,12 @@ const countHits = WrappedComponent => {
         }, []);
 
         // Fonction
-        const handleHit = () => {
+        const handleHit = pokemonName => {
             setHits(prevState => prevState + 1);
             console.log(
                 `nom du pokemon dans fonction countHits : ${WrappedComponent.name}`,
             );
-            props.handleHitAction(WrappedComponent.name, powerHit);
+            props.handleHitAction(pokemonName, powerHit);
         };
 
         return (

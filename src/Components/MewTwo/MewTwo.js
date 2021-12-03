@@ -52,7 +52,7 @@ const MewTwo = props => {
             <img src={MewTwoPic} style={opacityImgStyle} alt="Mew" />
 
             <Button
-                handleHit={handleHit}
+                handleHit={() => handleHit("MewTwo")}
                 className={classes.mewTwoButton}
                 isButtonNotAvaible={generalButtonAvaible()}
             >
