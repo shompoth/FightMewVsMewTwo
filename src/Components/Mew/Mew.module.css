@@ -6,6 +6,11 @@
     /* background-color: red; */
 }
 
+.container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 .mewButton {
     background-color: #fbd1d1;
 }

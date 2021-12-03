@@ -5,6 +5,11 @@
     align-items: center;
 }
 
+.container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 .mewTwoButton {
     /* background-color: #997996; */
     background-color: #dad4e0;
