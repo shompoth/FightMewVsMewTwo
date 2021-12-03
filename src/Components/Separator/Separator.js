@@ -5,7 +5,7 @@ const Separator = () => (
         style={{
             height: "2px",
             backgroundColor: "lightgray",
-            marginBlock: "30px",
+            marginBlock: "15px",
             opacity: 0.6,
         }}
     ></div>

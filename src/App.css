@@ -108,4 +108,8 @@ td {
     img {
         max-height: 200px;
     }
+
+    h2 {
+        font-size: 20px;
+    }
 }
